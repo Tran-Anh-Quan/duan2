@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+  </head>
+  <body>
+    <h3>Bạn để trường bằng phương tiện gì?</h3>
+    <select name="majoy">
+      <option value="oto">oto</option> 
+      <option value="xe máy">xe máy</option>
+      <option value="xe đạp">xe đạp</option>
+    </select>
+    <div class="chon">
+      <input type="radio" name="role" value="Xe máy" />xe máy
+      <input type="radio" name="role" value="Xe đạp" />xe đạp
+      <input type="radio" name="role" value="Xe oto" />xe oto
+    </div>
+    <script>
+      const x = document.getElementById("demo");
+
+      function getLocation() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+          x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+    </script>
+  </body>
+</html>
